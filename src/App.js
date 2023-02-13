@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
-function App() {
+function LoginForm() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (!username || !password) {
+      setError('Por favor, ingrese un nombre de usuario y una contraseña válidos');
+      return;
+    }
+    // Realizar una llamada a una API o un servicio aquí para autenticar al usuario
+    // ...
+
+    // Limpiar los campos y el mensaje de error
+    setUsername('');
+    setPassword('');
+    setError('');
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <form onSubmit={handleSubmit}>
+      {error && <div style={{ color: 'red' }}>{error}</div>}
+      <div>
+        <label htmlFor="username">Nombre de usuario:</label>
+        <input
+          type="text"
+          id="username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+      </div>
+      <div>
+        <label htmlFor="password">Contraseña:</label>
+        <input
+          type="password"
+          id="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
+      <button type="submit">Iniciar sesión</button>
+    </form>
   );
 }
 
-export default App;
+export default LoginForm;
