@@ -1,7 +1,7 @@
-import React from "react";
 import { useState } from "react";
 import './styleForm.css';
-import Rutas from './Rutas';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
 function App() {
@@ -34,12 +34,15 @@ function App() {
             <label htmlFor="password">Contraseña</label>
             <input type="password" id="password" name="password" required />
           </div>
-          <div>
-            <Rutas />
-          </div>
           <button type="submit">Iniciar sesión</button>
           <br>
-            ¿Aun no te has registrado?  <link to="/FormularioRegistro.jsx">Regístrate</link>
+            <Router>
+              <Switch>
+                <Route exact path="/" component="App.js" />
+                <Route path="/registro" component="FormularioRegistro.jsx" />
+              </Switch>
+            </Router>
+            ¿Aun no te has registrado?  <link to="/FormularioRegistro">Regístrate</link>
           </br>
         </form>
       </div>

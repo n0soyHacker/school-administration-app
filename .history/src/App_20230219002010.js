@@ -1,7 +1,6 @@
-import React from "react";
 import { useState } from "react";
 import './styleForm.css';
-import Rutas from './Rutas';
+import React from "react";
 
 
 function App() {
@@ -33,9 +32,6 @@ function App() {
           <div className="form-group">
             <label htmlFor="password">Contraseña</label>
             <input type="password" id="password" name="password" required />
-          </div>
-          <div>
-            <Rutas />
           </div>
           <button type="submit">Iniciar sesión</button>
           <br>
