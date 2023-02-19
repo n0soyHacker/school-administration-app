@@ -1,45 +1,32 @@
 body {
   font-family: sans-serif;
-  background-color: #f1f1f1;
-  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.2s, color 0.2s;
 }
 
-.App {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.topbar {
-  background-color: #0077be;
+.header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 10px;
+  height: 50px;
+  background-color: #007bff;
 }
 
-.toggle {
+.mode-toggle {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 24px;
   cursor: pointer;
 }
 
-.toggle i {
-  font-size: 18px;
-  color: #0077be;
-}
-
-.dark-mode {
-  background-color: #292929;
-  color: #fff;
-}
-
-form {
+.container {
   max-width: 500px;
   margin: 0 auto;
   background-color: #fff;
@@ -48,14 +35,20 @@ form {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+.container.dark-mode {
+  --bg-color: #1f1f1f;
+  --text-color: #fff;
+}
+
+.container.light-mode {
+  --bg-color: #f1f1f1;
+  --text-color: #000;
+}
+
 h2 {
   text-align: center;
   font-size: 28px;
   margin-bottom: 20px;
-}
-
-.form-container {
-  margin: auto;
 }
 
 .form-group {
@@ -86,4 +79,5 @@ button[type="submit"] {
   font-size: 18px;
   border: none;
   border-radius: 5px;
-}
+  cursor: pointer;
+  transition: background-color 0.

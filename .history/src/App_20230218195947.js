@@ -19,7 +19,6 @@ function App() {
           )}
         </div>
       </div>
-      {/* inicia el contenedor del formulario */}
       <div className="form-container">
         <form>
           <h2>iniciar sesion de la plataforma</h2>

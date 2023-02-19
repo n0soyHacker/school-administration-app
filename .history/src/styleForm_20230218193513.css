@@ -1,47 +1,12 @@
-body {
-  font-family: sans-serif;
-  background-color: #f1f1f1;
-  margin: 0;
-}
-
-.App {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.topbar {
-  background-color: #0077be;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 10px;
-}
-
-.toggle {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
+  height: 100vh;
 }
 
-.toggle i {
-  font-size: 18px;
-  color: #0077be;
-}
-
-.dark-mode {
-  background-color: #292929;
-  color: #fff;
-}
-
-form {
+.form-container {
   max-width: 500px;
-  margin: 0 auto;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -54,13 +19,8 @@ h2 {
   margin-bottom: 20px;
 }
 
-.form-container {
-  margin: auto;
-}
-
 .form-group {
   margin-bottom: 20px;
-  padding-right: 1em;
 }
 
 label {
@@ -86,4 +46,10 @@ button[type="submit"] {
   font-size: 18px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
 }
