@@ -1,51 +1,53 @@
 body {
   font-family: sans-serif;
   background-color: #f1f1f1;
+}
+
+/* Estilos para la barra superior */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0074D9;
+  color: #fff;
+  height: 60px;
+  padding: 0 20px;
+}
+
+.navbar h1 {
   margin: 0;
 }
 
-.App {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.topbar {
-  background-color: #0077be;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 10px;
-}
-
-.toggle {
+.toggle-theme {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  background-color: #fff;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.toggle i {
-  font-size: 18px;
-  color: #0077be;
+.toggle-theme i {
+  font-size: 24px;
+  color: #0074D9;
 }
 
-.dark-mode {
-  background-color: #292929;
-  color: #fff;
+.toggle-theme:hover {
+  background-color: #e6e6e6;
 }
 
-form {
+/* Estilos para el formulario */
+.form-container {
   max-width: 500px;
   margin: 0 auto;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
 }
 
 h2 {
@@ -54,13 +56,9 @@ h2 {
   margin-bottom: 20px;
 }
 
-.form-container {
-  margin: auto;
-}
-
 .form-group {
   margin-bottom: 20px;
-  padding-right: 1em;
+  padding-right: 1em; /* Añadido para separar los campos del borde derecho */
 }
 
 label {
@@ -86,4 +84,10 @@ button[type="submit"] {
   font-size: 18px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
 }
