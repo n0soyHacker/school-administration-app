@@ -1,7 +1,13 @@
 import { useState } from "react";
+import React from 'react';
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 import './styleForm.css';
+import RegistroEnsenantes from './Formulario/RegistroEnsenantes';
 
 function App() {
+
   const [darkMode, setDarkMode] = useState(false);
 
   const handleToggleDarkMode = () => {
@@ -9,6 +15,8 @@ function App() {
   };
 
   return (
+   
+    <BrowserRouter>
     <div className={`App ${darkMode ? "dark-mode" : ""}`}>
       <div className="topbar">
         <div className="toggle" onClick={handleToggleDarkMode}>
@@ -20,6 +28,7 @@ function App() {
         </div>
       </div>
       {/* inicia el contenedor del formulario */}
+    
       <div className="form-container">
         <form>
           <h2>iniciar sesion de la plataforma</h2>
@@ -33,8 +42,18 @@ function App() {
           </div>
           <button type="submit">Iniciar sesión</button>
         </form>
+       
+  
+  <div>
+  <Link to="/formulario/RegistroEnsenantes">¿Aún no te has registrado? Regístrate aquí</Link>
+  <Routes>
+        <Route path="/formulario/RegistroEnsenantes" element={<RegistroEnsenantes />} />
+  </Routes>
       </div>
     </div>
+    </div></BrowserRouter>
+   
+   
   );
 }
 
