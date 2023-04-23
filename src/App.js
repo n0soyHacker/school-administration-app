@@ -44,7 +44,8 @@ function App() {
         </form>
        
   
-  <div>
+  <div className="vinculo">
+    <br></br>
   <Link to="/formulario/RegistroEnsenantes">¿Aún no te has registrado? Regístrate aquí</Link>
   <Routes>
         <Route path="/formulario/RegistroEnsenantes" element={<RegistroEnsenantes />} />

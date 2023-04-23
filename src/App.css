@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,20 @@
   to {
     transform: rotate(360deg);
   }
+} */
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #e6e6e6;
+}
+
+.dark-mode .topbar {
+  background-color: #333333;
+}
+
+.dark-mode .toggle {
+  background-color: #555555;
+}
+
+.dark-mode .toggle i {
+  color: #e6e6e6;
 }
