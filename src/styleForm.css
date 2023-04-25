@@ -4,6 +4,10 @@ body {
   margin: 0;
 }
 
+a:visited {
+  color:blueviolet;
+}
+
 .App {
   min-height: 100vh;
   display: flex;
@@ -35,8 +39,32 @@ body {
 }
 
 .dark-mode {
-  background-color: #292929;
-  color: #fff;
+  background-color: #1a1a1a;
+  color: #e6e6e6;
+}
+
+.dark-mode .topbar {
+  background-color: #0077be;
+}
+
+.dark-mode .toggle {
+  background-color: #555555;
+}
+
+.dark-mode .toggle i {
+  color: #e6e6e6;
+}
+
+.dark-mode form {
+  background-color: #2c2c2c;
+}
+
+.dark-mode a:visited {
+  color:burlywood;
+}
+
+.dark-mode a {
+  color:#3a99d0;
 }
 
 form {
@@ -51,7 +79,13 @@ form {
 h2 {
   text-align: center;
   font-size: 28px;
-  margin-bottom: 20px;
+  
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  margin: 20px, 20px, 20px;
 }
 
 .form-container {
@@ -87,3 +121,7 @@ button[type="submit"] {
   border: none;
   border-radius: 5px;
 }
+.vinculo {
+  text-align: center;
+}
+
